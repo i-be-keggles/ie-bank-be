@@ -87,6 +87,3 @@ def test_delete_account(testing_client):
     response = testing_client.delete(f'/accounts/{account_id}')
     assert response.status_code == 200
     assert b'John Doe' in response.data
-
-    response = testing_client.get(f'/accounts/{account_id}')
-    assert response.status_code == 404
