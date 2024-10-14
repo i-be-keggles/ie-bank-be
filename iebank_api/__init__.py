@@ -27,6 +27,7 @@ db = SQLAlchemy(app)
 from iebank_api.models import Account
 
 with app.app_context():
+    db.drop_all()
     db.create_all()
 CORS(app)
 
